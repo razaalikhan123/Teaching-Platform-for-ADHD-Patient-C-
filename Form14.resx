@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Welcome to Focus First:
+Embark on a personalized academic journey crafted exclusively for ADHD students. 
+Our comprehensive platform is designed to cater to your unique needs, providing
+ a suite of features to enrich your learning experience.
+
+Intuitive Dashboard:
+Seamlessly navigate our user-friendly dashboard, granting swift access to 
+essential tools that streamline academic tasks and activities.
+
+Class Management:
+Effortlessly organize your courses, ensuring a structured approach to your 
+studies. Dive into subjects like:
+
+General Knowledge (GK):
+Stay informed and enhance your general knowledge skills with curated study
+ materials and engaging content.
+
+Mathematics (Maths):
+Master mathematical concepts with ease as you manage coursework, quizzes, 
+and resources—all in one dedicated space.
+
+Science:
+Explore the world of science with organized tasks, projects, and learning 
+materials tailored for effective study and exploration.
+
+Educational Games:
+Immerse yourself in specially designed educational games that make learning 
+a joyful experience while boosting focus and cognitive skills.
+
+Daily Routine Optimization:
+Efficiently plan and optimize your daily schedule with tools customized for 
+the ADHD student. Foster structure, productivity, and balance.
+
+Overview Snapshot:
+Gain a holistic view of your academic journey with comprehensive insights into 
+progress, upcoming engagements, and personalized recommendations—all at a glance.
+
+Contact Us for Support:
+Feel supported on every step of your academic journey. Reach out for guidance, 
+assistance, or to share valuable feedback through our accessible Contact Us feature.
+
+About Focus First:
+Delve into the vision behind Focus First and acquaint yourself with the dedicated
+team committed to simplifying and enhancing your academic experience. Your journey,
+tailored and focused—thrive with Focus First.s</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>About Us
+
+Welcome to Focus First, a dedicated space where empowerment, focus, and well-being converge
+ to support individuals managing Attention Deficit Hyperactivity Disorder (ADHD). At Focus First,
+ we've embarked on a mission to redefine the ADHD experience through innovative technology
+ and a commitment to the unique needs of our community.
+
+Our Mission:
+
+At Focus First, our mission is clear – to provide a transformative tool that enhances the daily lives 
+of individuals with ADHD. We're driven by a passion for fostering focus, empowering individuals,
+ and creating a positive impact on the ADHD journey.
+
+What Sets Focus First Apart:
+
+User-Centric Design: Focus First is crafted with a user-first approach. We prioritize simplicity, 
+accessibility, and functionality to ensure that our app seamlessly integrates into the lives of individuals
+ managing ADHD.
+
+Personalization: Recognizing the diversity of experiences, Focus First offers a range of customizable
+ features. Tailor your experience to match your unique needs and preferences, because we understand
+ that no two journeys with ADHD are alike.
+
+Evidence-Based Approach: Backed by the latest research and insights in ADHD, Focus First collaborates
+ with experts to provide scientifically grounded tools and resources.
+
+Our Commitment to You:
+
+Empowerment: Focus First is your partner in empowerment. Our app is designed to support you on
+ your journey, offering tools and resources that inspire independence and success.
+
+Community: Focus First isn't just an app; it's a community. Join a space where individuals with ADHD
+ connect, share experiences, and support one another.
+
+Get Involved:
+
+Choose Focus First and be a part of a community that redefines the ADHD narrative. Whether you're a user,
+ caregiver, or advocate, your journey is our journey. Together, let's make Focus First the foundation for a thriving ADHD community.
+
+Thank you for choosing Focus First. Here's to a focused and empowered future!
+
+</value>
+  </data>
+  <metadata name="guna2AnimateWindow1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+</root>

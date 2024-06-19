@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FD2CC5E-EB46-4BE2-9EA3-206F7E8BC01C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SE_Project</RootNamespace>
+    <AssemblyName>SE Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=2.0.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.2.0.3\lib\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dinner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dinner.Designer.cs">
+      <DependentUpon>dinner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10.Designer.cs">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11.Designer.cs">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9.Designer.cs">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gk1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gk1.Designer.cs">
+      <DependentUpon>gk1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gkq2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gkq2.Designer.cs">
+      <DependentUpon>gkq2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="midday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="midday.Designer.cs">
+      <DependentUpon>midday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="morning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="morning.Designer.cs">
+      <DependentUpon>morning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form12.Designer.cs">
+      <DependentUpon>Form12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form13.Designer.cs">
+      <DependentUpon>Form13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form14.Designer.cs">
+      <DependentUpon>Form14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MATHL1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MATHL1.Designer.cs">
+      <DependentUpon>MATHL1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GKL2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GKL2.Designer.cs">
+      <DependentUpon>GKL2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GKL3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GKL3.Designer.cs">
+      <DependentUpon>GKL3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MATHL2cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MATHL2cs.Designer.cs">
+      <DependentUpon>MATHL2cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MATHL3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MATHL3.Designer.cs">
+      <DependentUpon>MATHL3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScienceL1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScienceL1.Designer.cs">
+      <DependentUpon>ScienceL1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GKL1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GKL1.Designer.cs">
+      <DependentUpon>GKL1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScienceL2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScienceL2.Designer.cs">
+      <DependentUpon>ScienceL2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GKLEVELSPAGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GKLEVELSPAGE.Designer.cs">
+      <DependentUpon>GKLEVELSPAGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mathslevelpage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mathslevelpage.Designer.cs">
+      <DependentUpon>Mathslevelpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parent Dashboardcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parent Dashboardcs.Designer.cs">
+      <DependentUpon>Parent Dashboardcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Science levels page .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Science levels page .Designer.cs">
+      <DependentUpon>Science levels page .cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScienceL3cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScienceL3cs.Designer.cs">
+      <DependentUpon>ScienceL3cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sq1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sq1.Designer.cs">
+      <DependentUpon>sq1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="dinner.resx">
+      <DependentUpon>dinner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10.resx">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gk1.resx">
+      <DependentUpon>gk1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gkq2.resx">
+      <DependentUpon>gkq2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="midday.resx">
+      <DependentUpon>midday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="morning.resx">
+      <DependentUpon>morning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form12.resx">
+      <DependentUpon>Form12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form13.resx">
+      <DependentUpon>Form13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form14.resx">
+      <DependentUpon>Form14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MATHL1.resx">
+      <DependentUpon>MATHL1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GKL2.resx">
+      <DependentUpon>GKL2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GKL3.resx">
+      <DependentUpon>GKL3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MATHL2cs.resx">
+      <DependentUpon>MATHL2cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MATHL3.resx">
+      <DependentUpon>MATHL3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScienceL1.resx">
+      <DependentUpon>ScienceL1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GKL1.resx">
+      <DependentUpon>GKL1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScienceL2.resx">
+      <DependentUpon>ScienceL2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GKLEVELSPAGE.resx">
+      <DependentUpon>GKLEVELSPAGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mathslevelpage.resx">
+      <DependentUpon>Mathslevelpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parent Dashboardcs.resx">
+      <DependentUpon>Parent Dashboardcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Science levels page .resx">
+      <DependentUpon>Science levels page .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScienceL3cs.resx">
+      <DependentUpon>ScienceL3cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sq1.resx">
+      <DependentUpon>sq1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy_2-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explosion-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staer.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rb1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\real.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\real2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\real2 - Copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\real3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dec2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\non2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\www2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nonfi2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fict2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rom2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add a little bit of body text.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detective.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiction.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nonfictionstory.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Romantic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explosion.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Navy Gradient Business Dekstop Prototype %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Navy Gradient Business Dekstop Prototype %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tytyt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1040.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1700.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gk bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-math-whiteboard-border-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login page.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home page.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminnn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login page1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login white1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\games icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\overview icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue Gray Brain Idea Logo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-contact-us-flat-design-style-png-image_2766546-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sm_5af2d4cf61c21-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sm_5af2d4cf61c21-removebg-preview11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sm_5af2d4cf61c21-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FCOUS FIRST IN WHITE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-computer-icons-user-profile-password-login-end-user-blue-computer-network-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USERNAME ICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSWORD ICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-computer-icons-user-management-login-computer-computer-desktop-wallpaper-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-12-24 at 1.10.55 AM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maths icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\science icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\science icoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gk icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shooting game icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shape mathcing icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shape mathcing icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\story board.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shooting game iccon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\morning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GOOD MORNING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DINNER TIME.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MIDDAY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kkkll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\general-knowledge-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_659387039_tf3tcFMCFfYFdEJb7Zcyzxo5wH8ekzmx-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartoon-math-word-with-math-symbols_1308-97111-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-free-math-thumbnail-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-class-science-education-lesson-science-class-chemistry-scientist-thumbnail-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-science-illustration-student-master-of-science-eighth-grade-middle-school-science-free-text-logo-removebg-preview.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
